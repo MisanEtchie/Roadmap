@@ -2048,7 +2048,7 @@ Story(
         "That's none of your business!",
     multipleOption: false,
     choices: [
-      {"Continue": 35}
+      {"Continue": 35} 
     ],
   ),
 
