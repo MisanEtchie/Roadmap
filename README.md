@@ -1,6 +1,8 @@
 # roadmap_game
 
-A new Flutter project.
+## Roadmap
+
+Roadmap is a narrative-driven game where users interact with characters and stories through customizable cards, including character selection and love interest cards. Players advance by making choices that shape the story, while engaging with character emotions, game levels, and dynamic backgrounds.
 
 ## Getting Started
 
