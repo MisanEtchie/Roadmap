@@ -1,4 +1,4 @@
-![IMG_8810](https://github.com/user-attachments/assets/da3162d0-37c1-43ad-9454-bc316063d515)![IMG_8806](https://github.com/user-attachments/assets/23232fc6-10f8-479d-b57f-a4a06f0e9212)# roadmap_game
+
 
 ## Roadmap
 
