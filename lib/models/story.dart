@@ -2079,8 +2079,8 @@ Story(
         "James is clearly upset.",
     multipleOption: true,
     choices: [
-      {"Apologize": 48},
-      {"Press further": 49}
+      {"Apologize": 37},
+      {"Press further": 38}
     ],
   ),
 
@@ -2098,23 +2098,11 @@ Story(
     ],
   ),
 
-  // Story 46: Entering the Secret Door
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "You step into a narrow passage lit by dim lanterns.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 51}
-    ],
-  ),
+  
 
-  // Story 47: [Removed to prevent disjointed narrative]
+ 
 
-  // Story 48: Apologizing to James
+  // Story 37: Apologizing to James
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeTwoCard,
@@ -2124,11 +2112,11 @@ Story(
         "I'm sorry. I didn't mean to pry.",
     multipleOption: false,
     choices: [
-      {"Continue": 52}
+      {"Continue": 39}
     ],
   ),
 
-  // Story 49: Pressing James Further
+  // Story 38: Pressing James Further
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeTwoCard,
@@ -2138,11 +2126,11 @@ Story(
         "Your reaction says otherwise. What are you hiding?",
     multipleOption: false,
     choices: [
-      {"Continue": 52}
+      {"Continue": 40}
     ],
   ),
 
-  // Story 50: Deciding Where to Go Next
+  // Story 39: Deciding Where to Go Next
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeOneCard,
@@ -2152,26 +2140,14 @@ Story(
         "You need to decide your next course of action.",
     multipleOption: true,
     choices: [
-      {"Find Mrs. Bredessen": 53},
-      {"Rest in your room": 60}
+      {"Find Mrs. Bredessen": 42},
+      
     ],
   ),
 
-  // Story 51: Exploring the Secret Passage
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "The passage leads to a small room filled with old artifacts.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 54}
-    ],
-  ),
+ 
 
-  // Story 52: James's Outburst
+  // Story 40: James's Outburst
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeThreeCard,
@@ -2181,11 +2157,25 @@ Story(
         "Enough! Leave me alone!",
     multipleOption: false,
     choices: [
-      {"Continue": 55}
+      {"Continue": 41}
     ],
   ),
 
-  // Story 53: Finding Mrs. Bredessen
+  //41
+  Story(
+    bg: StoryBackground.bg1,
+    type: StoryType.TypeOneCard,
+    emotion: Emotion.Default,
+    speaker: null,
+    title:
+        "You decide to excuse yourself due to James's anger",
+    multipleOption: false,
+    choices: [
+      {"Approach her": 39}
+    ],
+  ),
+
+  //42
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeOneCard,
@@ -2195,25 +2185,14 @@ Story(
         "You find Mrs. Bredessen in the parlor, staring out the window.",
     multipleOption: false,
     choices: [
-      {"Approach her": 56}
+      {"Approach her": 43}
     ],
   ),
 
-  // Story 54: Discovering a Mysterious Journal
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "Among the artifacts, you discover a journal with cryptic entries.",
-    multipleOption: false,
-    choices: [
-      {"Read the journal": 57}
-    ],
-  ),
 
-  // Story 55: Mrs. Bredessen's Grief
+
+
+  // Story 43
   Story(
     bg: StoryBackground.bg1,
     type: StoryType.TypeThreeCard,
@@ -2223,1389 +2202,673 @@ Story(
         "I don't know how to go on without him.",
     multipleOption: true,
     choices: [
-      {"Offer comfort": 58},
-      {"Ask about Mr. Bredessen": 59}
+      
+      {"Ask about Mr. Bredessen": 45}
     ],
   ),
 
-  // Story 56: Reading the Journal
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "The journal mentions secret dealings and strained relationships.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 60}
-    ],
-  ),
 
-  // Story 57: Offering Comfort
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeTwoCard,
-    emotion: Emotion.Happy,
-    speaker: null,
-    title:
-        "I'm so sorry for your loss. If there's anything I can do...",
-    multipleOption: false,
-    choices: [
-      {"Continue": 61}
-    ],
-  ),
 
-  // Story 58: Asking About Mr. Bredessen
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeTwoCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "Was there anyone who might have wanted to harm him?",
-    multipleOption: false,
-    choices: [
-      {"Continue": 62}
-    ],
-  ),
-
-  // Story 59: Gaining Insight
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "The journal might hold clues to the motive behind his death.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 63}
-    ],
-  ),
-
-  // Story 60: Resting in Your Room
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "Feeling overwhelmed, you decide to rest in your room for a while.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 63}
-    ],
-  ),
-
-  // Story 61: Mrs. Bredessen's Appreciation
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeThreeCard,
-    emotion: Emotion.Happy,
-    speaker: bredwCharacter,
-    title:
-        "Thank you. Your kindness means a lot.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 64}
-    ],
-  ),
-
-  // Story 62: Mrs. Bredessen's Hesitation
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeThreeCard,
-    emotion: Emotion.Shocked,
-    speaker: bredwCharacter,
-    title:
-        "I... I don't know. He had his disagreements, but nothing serious.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 64}
-    ],
-  ),
-
-  // Story 63: Interrupted Rest
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "A knock on your door interrupts your rest.",
-    multipleOption: false,
-    choices: [
-      {"Answer the door": 65}
-    ],
-  ),
-
-  // Story 64: Deciding What to Do Next
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "You consider your next move.",
-    multipleOption: true,
-    choices: [
-      {"Search Mr. Bredessen's office": 66},
-      {"Speak with Damian": 70}
-    ],
-  ),
-
-  // Story 65: Mia at the Door
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeThreeCard,
-    emotion: Emotion.Happy,
-    speaker: miaCharacter,
-    title:
-        "I thought you might want to explore the passages now.",
-    multipleOption: false,
-    choices: [
-      {"Agree to go": 67},
-      {"Decline": 68}
-    ],
-  ),
-
-  // Story 66: Searching the Office
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "You head to Mr. Bredessen's office, hoping to find clues.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 69}
-    ],
-  ),
-
-  // Story 67: Exploring with Mia
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Happy,
-    speaker: null,
-    title:
-        "You and Mia set off to explore the hidden passages.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 71}
-    ],
-  ),
-
-  // Story 68: Declining Mia's Offer
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeTwoCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "Maybe later. I need some time alone.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 69}
-    ],
-  ),
-
-  // Story 69: Inside the Office
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "The office is cluttered with papers and personal items.",
-    multipleOption: false,
-    choices: [
-      {"Search the desk": 72},
-      {"Examine the bookshelf": 73}
-    ],
-  ),
-
-  // Story 70: Speaking with Damian
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Default,
-    speaker: null,
-    title:
-        "You decide to find Damian and see what he knows.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 74}
-    ],
-  ),
-
-  // Story 71: Entering the Passage with Mia
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "You enter a dimly lit corridor behind a hidden panel.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 75}
-    ],
-  ),
-
-  // Story 72: Finding a Hidden Document
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "In the desk drawer, you find a hidden document.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 76}
-    ],
-  ),
-
-  // Story 73: Discovering a Secret Compartment
-  Story(
-    bg: StoryBackground.bg1,
-    type: StoryType.TypeOneCard,
-    emotion: Emotion.Shocked,
-    speaker: null,
-    title:
-        "Behind a book, a lever reveals a secret compartment.",
-    multipleOption: false,
-    choices: [
-      {"Continue": 77}
-    ],
-  ),
-
-  // Story 77: Discovering Hidden Documents
+// Story 44: Asking About Mr. Bredessen
 Story(
   bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
   speaker: null,
   title:
-      "Inside the compartment, you find old letters addressed to Mr. Bredessen.",
+      "Was there anything troubling Mr. Bredessen recently?",
   multipleOption: false,
   choices: [
-    {"Continue": 78}
+    {"Continue": 45}
   ],
 ),
 
-// Story 78: Reading the Letters
+// Story 45: Mrs. Bredessen Hints at Strange Letters
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: bredwCharacter,
+  title:
+      "Well, he had been receiving some unsettling letters lately.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 46}
+  ],
+),
+
+// Story 46: Considering Investigating the Letters
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeOneCard,
   emotion: Emotion.Default,
   speaker: null,
   title:
-      "The letters hint at a family feud and threats from an unknown person.",
+      "You consider investigating these letters to find clues.",
+  multipleOption: true,
+  choices: [
+    {"Offer to look into the letters": 47},
+    {"Leave Mrs. Bredessen alone": 50}
+  ],
+),
+
+// Story 47: Offering to Help
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "Perhaps I could take a look at those letters?",
+  multipleOption: false,
+  choices: [
+    {"Continue": 48}
+  ],
+),
+
+// Story 48: Mrs. Bredessen Agrees
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Default,
+  speaker: bredwCharacter,
+  title:
+      "I suppose it couldn't hurt. They're in his office.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 49}
+  ],
+),
+
+// Story 49: Heading to the Office
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You make your way to Mr. Bredessen's office.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 51}
+  ],
+),
+
+// Story 50: Leaving Mrs. Bredessen Alone
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You decide to give Mrs. Bredessen some space.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 52}
+  ],
+),
+
+// Story 51: Entering the Office
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "The office is dimly lit, papers scattered everywhere.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 53}
+  ],
+),
+
+// Story 52: Pondering Next Move
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You ponder your next move.",
+  multipleOption: true,
+  choices: [
+    {"Search Mr. Bredessen's office": 49},
+    
+  ],
+),
+
+// Story 53: Searching the Desk
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You begin searching through the desk drawers.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 54}
+  ],
+),
+
+// Story 54: Finding the Threatening Letter
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "Among the documents, you find a letter ending with 'Missing in Action'.",
+  multipleOption: false,
+  choices: [
+    {"Object 1": 55},
+     {"Object 2": 57},
+    {"Object 3": 56},
+  ],
+),
+
+//55
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "This is just an object 1.",
+  multipleOption: false,
+  choices: [
+    {"Object 1": 54}
+  ],
+),
+
+//56
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "This is just an object 1.",
+  multipleOption: false,
+  choices: [
+    {"Object 2": 54}
+  ],
+),
+
+//57
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "This is a suspicious letter. you decided to read it",
+  multipleOption: false,
+  choices: [
+    {"Next": 58}
+  ],
+),
+
+//58
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "\"Dear Mr. Bredessen,\n\nYou thought the past was buried, but some wounds never heal. You took someone dear from me, and now it's time you understand that actions have consequences. Expect me when you least anticipate.\n\nMissing in Action,\nA Daughter Wronged\"",
+  multipleOption: false,
+  choices: [
+    {"Next": 59}
+  ],
+),
+
+
+
+// Story 59: Recalling Mia's Words
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "This is crucial information. Thank you. What do you think Missing In Action might stand for?",
+  multipleOption: false,
+  choices: [
+    {"Damian": 60},
+     {"James": 60},
+     {"Mia": 61},
+    {"Mrs Bredessen": 60},
+  ],
+),
+
+//60
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "Oops. that can't be right",
+  multipleOption: false,
+  choices: [
+    {"Next": 59}
+  ],
+),
+
+// Story 61
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "Could Mia be connected to these threats? Is she the killer?",
+  multipleOption: true,
+  choices: [
+    {"Confront Mia": 62},
+    {"Inform the detective": 63}
+  ],
+),
+
+// Story 62: Confronting Mia
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You decide to confront Mia about the letter.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 64}
+  ],
+),
+
+// Story 63: Informing the Detective
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You decide to share your findings with Detective Reynolds.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 80}
+  ],
+),
+
+// Story 64: Finding Mia
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Default,
+  speaker: miaCharacter,
+  title:
+      "Oh, hi. Is everything alright?",
+  multipleOption: false,
+  choices: [
+    {"Continue": 65}
+  ],
+),
+
+// Story 65: Confronting Mia with the Letter
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "I found this letter in Mr. Bredessen's office. It ends with 'Missing in Action'. What do you know about it?",
+  multipleOption: false,
+  choices: [
+    {"Continue": 66}
+  ],
+),
+
+// Story 66: Mia's Reaction
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: miaCharacter,
+  title:
+      "I... I didn't think anyone would find that.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 67}
+  ],
+),
+
+// Story 67: Pressing Mia for Answers
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "So it's true? You wrote this letter?",
+  multipleOption: false,
+  choices: [
+    {"Continue": 68}
+  ],
+),
+
+// Story 68: Mia's Confession
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: miaCharacter,
+  title:
+      "Yes, but you have to understand why I did it.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 69}
+  ],
+),
+
+// Story 69: Deciding How to Respond
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You need to decide how to handle this revelation.",
+  multipleOption: true,
+  choices: [
+    {"Hear Mia's explanation": 70},
+    {"Report her to the detective": 77}
+  ],
+),
+
+// Story 70: Listening to Mia
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "Alright, explain yourself.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 71}
+  ],
+),
+
+// Story 71: Mia's Story
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: miaCharacter,
+  title:
+      "Mr. Bredessen was responsible for my father's disappearance. He ruined our lives.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 72}
+  ],
+),
+
+// Story 72: Understanding Mia's Motive
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "So you sought revenge against him?",
+  multipleOption: false,
+  choices: [
+    {"Continue": 73}
+  ],
+),
+
+// Story 73: Mia's Regret
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: miaCharacter,
+  title:
+      "I didn't intend for things to go this far. I just wanted him to confess.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 74}
+  ],
+),
+
+// Story 74: Deciding Mia's Fate
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You must decide what to do next.",
+  multipleOption: true,
+  choices: [
+    {"Help Mia escape": 75},
+    {"Convince her to surrender": 78}
+  ],
+),
+
+// Story 75: Helping Mia Escape
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "I can help you, but you need to leave now.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 76}
+  ],
+),
+
+// Story 76: Mia's Escape
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Happy,
+  speaker: miaCharacter,
+  title:
+      "Thank you. I won't forget this.",
   multipleOption: false,
   choices: [
     {"Continue": 79}
   ],
 ),
 
-// Story 79: Deciding What to Do Next
+// Story 77: Reporting Mia to the Detective
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeOneCard,
   emotion: Emotion.Default,
   speaker: null,
   title:
-      "You consider sharing this information with someone.",
-  multipleOption: true,
+      "You decide to inform Detective Reynolds about Mia's confession.",
+  multipleOption: false,
   choices: [
-    {"Tell Mia": 80},
-    {"Keep it to yourself": 81}
+    {"Continue": 80}
   ],
 ),
 
-// Story 80: Sharing with Mia
+// Story 78: Convincing Mia to Surrender
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeTwoCard,
+  emotion: Emotion.Default,
+  speaker: null,
+  title:
+      "You need to face the consequences of your actions. It's the right thing to do.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 81}
+  ],
+),
+
+// Story 79: Mia Leaves the Mansion
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeOneCard,
+  emotion: Emotion.Shocked,
+  speaker: null,
+  title:
+      "Mia disappears into the night. You're left pondering your decision.",
+  multipleOption: false,
+  choices: [
+    {"THE END": 0}
+  ],
+),
+
+
+// Continuing from Story 80
+
+// Story 80
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: miaCharacter,
+  emotion: Emotion.Default,
+  speaker: detectiveCharacter,
   title:
-      "This is serious. We need to find out who wrote these.",
+      "Thank you for bringing this to my attention. We'll handle it from here.",
   multipleOption: false,
   choices: [
     {"Continue": 82}
   ],
 ),
 
-// Story 81: Keeping the Information Private
+// Story 82: Watching the Aftermath
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeOneCard,
   emotion: Emotion.Default,
   speaker: null,
   title:
-      "You decide to keep the letters for now.",
+      "As Detective Reynolds moves to arrest Mia, you watch the events unfold.",
   multipleOption: false,
   choices: [
     {"Continue": 83}
   ],
 ),
 
-// Story 82: Deciding Next Steps with Mia
+// Story 83: Mia's Reaction
 Story(
   bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Shocked,
+  speaker: miaCharacter,
   title:
-      "Together, you plan to investigate further.",
-  multipleOption: true,
+      "I never wanted it to end this way.",
+  multipleOption: false,
   choices: [
-    {"Search for more clues": 84},
-    {"Confront Mrs. Bredessen": 85}
+    {"Continue": 84}
   ],
 ),
 
-// Story 83: Exiting the Office
+// Story 84: Reflecting on Your Decision
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeOneCard,
   emotion: Emotion.Default,
   speaker: null,
   title:
-      "You leave the office, pondering your next move.",
+      "You wonder if you did the right thing by reporting her.",
+  multipleOption: false,
+  choices: [
+    {"Continue": 85}
+  ],
+),
+
+// Story 85: Detective's Assurance
+Story(
+  bg: StoryBackground.bg1,
+  type: StoryType.TypeThreeCard,
+  emotion: Emotion.Happy,
+  speaker: detectiveCharacter,
+  title:
+      "You did the right thing. Justice must be served.",
   multipleOption: false,
   choices: [
     {"Continue": 86}
   ],
 ),
 
-// Story 84: Searching for More Clues
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You and Mia decide to search the library for more information.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 87}
-  ],
-),
-
-// Story 85: Confronting Mrs. Bredessen
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "You approach Mrs. Bredessen with the letters.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 88}
-  ],
-),
-
-// Story 86: Encountering Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Default,
-  speaker: damCharacter,
-  title:
-      "You look troubled. Found something interesting?",
-  multipleOption: true,
-  choices: [
-    {"Share about the letters": 89},
-    {"Keep it vague": 90}
-  ],
-),
-
-// Story 87: Finding an Old Diary
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "In the library, you discover an old diary belonging to Mr. Bredessen.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 91}
-  ],
-),
-
-// Story 88: Mrs. Bredessen's Reaction
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: bredwCharacter,
-  title:
-      "Where did you find these?",
-  multipleOption: true,
-  choices: [
-    {"Tell the truth": 92},
-    {"Avoid answering": 93}
-  ],
-),
-
-// Story 89: Sharing with Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "I found some letters that might be important.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 94}
-  ],
-),
-
-// Story 90: Keeping It Vague with Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "Just trying to make sense of everything.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 95}
-  ],
-),
-
-// Story 91: Reading the Diary
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "The diary details tensions within the family over inheritance.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 96}
-  ],
-),
-
-// Story 92: Telling Mrs. Bredessen the Truth
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "I found them hidden in Mr. Bredessen's office.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 97}
-  ],
-),
-
-// Story 93: Avoiding the Question
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "I think that's not important right now.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 98}
-  ],
-),
-
-// Story 94: Damian's Interest
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Default,
-  speaker: damCharacter,
-  title:
-      "Perhaps we should discuss this somewhere private.",
-  multipleOption: false,
-  choices: [
-    {"Agree": 99}
-  ],
-),
-
-// Story 95: Damian's Suspicion
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: damCharacter,
-  title:
-      "You're hiding something.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 100}
-  ],
-),
-
-// Story 96: Sharing Findings with Mia
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: miaCharacter,
-  title:
-      "This could explain a lot.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 101}
-  ],
-),
-
-// Story 97: Mrs. Bredessen's Concern
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: bredwCharacter,
-  title:
-      "You shouldn't be snooping around.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 102}
-  ],
-),
-
-// Story 98: Mrs. Bredessen's Frustration
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: bredwCharacter,
-  title:
-      "If you're not going to be honest, I can't help you.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 103}
-  ],
-),
-
-// Story 99: Meeting with Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You follow Damian to a secluded room.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 104}
-  ],
-),
-
-// Story 100: Deciding How to Respond
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "Damian is getting suspicious.",
-  multipleOption: true,
-  choices: [
-    {"Tell him about the letters": 104},
-    {"Walk away": 105}
-  ],
-),
-
-// Story 101: Planning Next Steps with Mia
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You and Mia decide to confront James.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 106}
-  ],
-),
-
-// Story 102: Apologizing to Mrs. Bredessen
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Happy,
-  speaker: null,
-  title:
-      "I'm sorry. I was just trying to help.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 107}
-  ],
-),
-
-// Story 103: Leaving Mrs. Bredessen
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide it's best to leave her alone.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 108}
-  ],
-),
-
-// Story 104: Damian's Proposal
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Default,
-  speaker: damCharacter,
-  title:
-      "We can work together to uncover the truth.",
-  multipleOption: false,
-  choices: [
-    {"Agree": 109},
-    {"Decline": 110}
-  ],
-),
-
-// Story 105: Walking Away from Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide not to engage with Damian.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 111}
-  ],
-),
-
-// Story 106: Confronting James Again
+// Story 86: James Approaches You
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeThreeCard,
   emotion: Emotion.Default,
   speaker: jamesCharacter,
   title:
-      "What now?",
-  multipleOption: false,
-  choices: [
-    {"Continue": 112}
-  ],
-),
-
-// Story 107: Mrs. Bredessen Softens
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: bredwCharacter,
-  title:
-      "I know you're trying to help. It's just... complicated.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 113}
-  ],
-),
-
-// Story 108: Considering Your Options
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You wonder who else might know about the letters.",
+      "I heard what happened. Are you okay?",
   multipleOption: true,
   choices: [
-    {"Talk to the detective": 114},
-    {"Search for more clues": 115}
+    {"I'm fine": 87},
+    {"I feel conflicted": 88}
   ],
 ),
 
-// Story 109: Teaming Up with Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You and Damian decide to collaborate.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 116}
-  ],
-),
-
-// Story 110: Declining Damian's Offer
+// Story 87: Responding to James Positively
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
+  emotion: Emotion.Happy,
   speaker: null,
   title:
-      "I'd rather handle this on my own.",
+      "Yes, I'm alright. Thank you for asking.",
   multipleOption: false,
   choices: [
-    {"Continue": 117}
+    {"Continue": 89}
   ],
 ),
 
-// Story 111: Heading Back to Your Room
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide to return to your room to think.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 118}
-  ],
-),
-
-// Story 112: Presenting the Evidence to James
+// Story 88: Expressing Conflict to James
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeTwoCard,
   emotion: Emotion.Shocked,
   speaker: null,
   title:
-      "We know about the inheritance dispute.",
+      "I don't know. It feels complicated.",
   multipleOption: false,
   choices: [
-    {"Continue": 119}
+    {"Continue": 89}
   ],
 ),
 
-// Story 113: Gaining Mrs. Bredessen's Trust
+// Story 89: James Offers Support
 Story(
   bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
+  type: StoryType.TypeThreeCard,
   emotion: Emotion.Happy,
-  speaker: null,
-  title:
-      "She seems more willing to talk now.",
-  multipleOption: true,
-  choices: [
-    {"Ask about the letters": 120},
-    {"Change the subject": 121}
-  ],
-),
-
-// Story 114: Seeking Out Detective Reynolds
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You find the detective reviewing notes.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 122}
-  ],
-),
-
-// Story 115: Exploring the Mansion Further
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide to search other rooms for clues.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 123}
-  ],
-),
-
-// Story 116: Damian Shares Information
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Default,
-  speaker: damCharacter,
-  title:
-      "I've been investigating on my own. Here's what I found.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 124}
-  ],
-),
-
-// Story 117: Damian's Disappointment
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: damCharacter,
-  title:
-      "Suit yourself.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 125}
-  ],
-),
-
-// Story 118: Unexpected Visitor
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "There's a knock on your door.",
-  multipleOption: false,
-  choices: [
-    {"Answer it": 126}
-  ],
-),
-
-// Story 119: James's Reaction
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
   speaker: jamesCharacter,
   title:
-      "You don't know the whole story.",
+      "If you need someone to talk to, I'm here.",
   multipleOption: false,
   choices: [
-    {"Continue": 127}
+    {"Continue": 90}
   ],
 ),
 
-// Story 120: Asking About the Letters
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "Can you tell me more about these letters?",
-  multipleOption: false,
-  choices: [
-    {"Continue": 128}
-  ],
-),
-
-// Story 121: Changing the Subject
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "How are you holding up?",
-  multipleOption: false,
-  choices: [
-    {"Continue": 129}
-  ],
-),
-
-// Story 122: Discussing Findings with the Detective
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Default,
-  speaker: detectiveCharacter,
-  title:
-      "What have you found?",
-  multipleOption: false,
-  choices: [
-    {"Continue": 130}
-  ],
-),
-
-// Story 123: Discovering a Hidden Room
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "You stumble upon a room not marked on any map.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 131}
-  ],
-),
-
-// Story 124: Reviewing Damian's Findings
+// Story 90: Conclusion of Level 3
 Story(
   bg: StoryBackground.bg1,
   type: StoryType.TypeOneCard,
   emotion: Emotion.Default,
   speaker: null,
   title:
-      "He shows you documents linking James to questionable activities.",
+      "With the mystery unraveled, you reflect on the events and the choices you've made. The shadows of the mansion seem less daunting now, but the consequences of that night will stay with you.",
   multipleOption: false,
   choices: [
-    {"Continue": 132}
+    {"THE END": 0}
   ],
 ),
 
-// Story 125: Damian Walks Away
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "Damian leaves, and you're left alone.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 133}
-  ],
-),
-
-// Story 126: Mia at Your Door
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: miaCharacter,
-  title:
-      "I think I found something important.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 133}
-  ],
-),
-
-// Story 127: Pressing James for More
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "Then tell me your side of the story.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 134}
-  ],
-),
-
-// Story 128: Mrs. Bredessen Opens Up
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: bredwCharacter,
-  title:
-      "Those letters were from a disgruntled business partner.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 135}
-  ],
-),
-
-// Story 129: Mrs. Bredessen's Gratitude
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: bredwCharacter,
-  title:
-      "Thank you for your concern.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 136}
-  ],
-),
-
-// Story 130: Sharing the Letters with the Detective
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You hand over the letters to Detective Reynolds.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 137}
-  ],
-),
-
-// Story 131: Exploring the Hidden Room
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "The room contains artifacts and a portrait of an unknown person.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 138}
-  ],
-),
-
-// Story 132: Deciding to Trust Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You realize Damian might be a valuable ally.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 139}
-  ],
-),
-
-// Story 133: Investigating with Mia
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Happy,
-  speaker: null,
-  title:
-      "You and Mia decide to follow up on her lead.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 140}
-  ],
-),
-
-// Story 134: James's Confession
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: jamesCharacter,
-  title:
-      "Fine. I've been trying to secure my share of the inheritance.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 141}
-  ],
-),
-
-// Story 135: Learning About the Business Partner
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You realize this partner might be a suspect.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 142}
-  ],
-),
-
-// Story 136: Offering Further Help
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeTwoCard,
-  emotion: Emotion.Happy,
-  speaker: null,
-  title:
-      "If there's anything else I can do, let me know.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 143}
-  ],
-),
-
-// Story 137: Detective's Appreciation
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: detectiveCharacter,
-  title:
-      "This is valuable information.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 144}
-  ],
-),
-
-// Story 138: Finding a Key Item
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "You find a sealed envelope addressed to Damian.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 145}
-  ],
-),
-
-// Story 139: Forming an Alliance
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You and Damian agree to share any new findings.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 146}
-  ],
-),
-
-// Story 140: Mia's Discovery
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Shocked,
-  speaker: miaCharacter,
-  title:
-      "Look at this. It could be a clue.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 147}
-  ],
-),
-
-// Story 141: Considering James's Motive
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You wonder if James could be the culprit.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 148}
-  ],
-),
-
-// Story 142: Deciding to Inform the Detective
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide to tell Detective Reynolds about the business partner.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 149}
-  ],
-),
-
-// Story 143: Mrs. Bredessen's Appreciation
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: bredwCharacter,
-  title:
-      "You've been a great help.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 150}
-  ],
-),
-
-// Story 144: Level 3 Conclusion (Detective's Perspective)
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "With your assistance, the detective feels closer to solving the case.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-// Story 145: Deciding What to Do with the Envelope
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You need to decide whether to open it or give it to Damian.",
-  multipleOption: true,
-  choices: [
-    {"Open it": 150},
-    {"Give it to Damian": 146}
-  ],
-),
-
-// Story 146: Continuing Alliance with Damian
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You hand the envelope to Damian, strengthening your trust.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 150}
-  ],
-),
-
-// Story 147: Mia's Clue Leads to Revelation
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "The clue suggests an outside party may be involved.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 150}
-  ],
-),
-
-// Story 148: Deciding to Monitor James
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Default,
-  speaker: null,
-  title:
-      "You decide to keep an eye on James for any suspicious activity.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 150}
-  ],
-),
-
-// Story 149: Detective Thanks You
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeThreeCard,
-  emotion: Emotion.Happy,
-  speaker: detectiveCharacter,
-  title:
-      "This could be the breakthrough we needed.",
-  multipleOption: false,
-  choices: [
-    {"Continue": 150}
-  ],
-),
-
-// Story 150: Level 3 Conclusion
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
-
-Story(
-  bg: StoryBackground.bg1,
-  type: StoryType.TypeOneCard,
-  emotion: Emotion.Shocked,
-  speaker: null,
-  title:
-      "As the day comes to an end, you realize the mansion holds more secrets than you imagined. Your investigation is far from over.",
-  multipleOption: false,
-  choices: [
-    {"THE END OF LEVEL 3": 0}
-  ],
-),
 
 
 

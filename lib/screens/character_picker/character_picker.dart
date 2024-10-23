@@ -78,40 +78,57 @@ class _CharacterPickerState extends ConsumerState<CharacterPicker> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-
-              if (widget.isNotNew )
-
+        bottom: false,
+        child: Column(
+          children: [
+            if (widget.isNotNew)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
                 child: Row(
                   children: [
                     GestureDetector(
-                              //icon: Icon(Icons.home),
-                              onTap: () {
-                                Navigator.of(context).pop();
-                                //player.stop(); // Stop audio when leaving
-                    
-                                
-                              },
-                              child: BackArrowButton(),
-                              //color: Colors.white,
-                            ),
-                            Spacer(),
-                            Text("selected charactwer: ${selectedCharacter?.name ?? "None"}"),
+                      //icon: Icon(Icons.home),
+                      onTap: () {
+                        Navigator.of(context).pop();
+                        //player.stop(); // Stop audio when leaving
+                      },
+                      child: const BackArrowButton(),
+                      //color: Colors.white,
+                    ),
+                    const Spacer(),
+
+                    SizedBox(width: 24,),
+
+                    Container(
+                      width: MediaQuery.of(context).size.width - 120,
+                      child: const Padding(
+                                      padding: EdgeInsets.symmetric(vertical: 12.0),
+                                      child: Text(
+                                        "Changing character doesn't affect game progress",
+                                        maxLines: 2,
+                                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                    ),
+                    //Text("selected character: ${selectedCharacter?.name ?? "None"}"),
                   ],
                 ),
               ),
-
-              Spacer(),
-              
-              Container(
-                height: MediaQuery.of(context).size.height - 192,
-                child: SingleChildScrollView(
+            if (!widget.isNotNew)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.0),
+                child: Text(
+                  "Select Your Character",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+              ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Center(
                   child: Column(
                     children: [
+                      // First row of characters
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -120,40 +137,32 @@ class _CharacterPickerState extends ConsumerState<CharacterPicker> {
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
                           CharacterPickerImage(
                             character: bwCharacter,
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
-                       
                         ],
                       ),
-                
-                      const SizedBox(height: 16,),
-                  
+                      const SizedBox(height: 16),
+                      // Second row of characters
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           CharacterPickerImage(
                             character: lwCharacter,
                             func: toggleCharacter,
-                           selectedCharacter: selectedCharacter,
+                            selectedCharacter: selectedCharacter,
                           ),
-                      
                           CharacterPickerImage(
                             character: wwCharacter,
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
-                       
                         ],
                       ),
-                
-                      const SizedBox(height: 16,),
-                  
+                      const SizedBox(height: 16),
+                      // Third row of characters
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -162,19 +171,15 @@ class _CharacterPickerState extends ConsumerState<CharacterPicker> {
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
                           CharacterPickerImage(
                             character: bmCharacter,
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
-                       
                         ],
                       ),
-                
-                      const SizedBox(height: 16,),
-                  
+                      const SizedBox(height: 16),
+                      // Fourth row of characters
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -183,64 +188,55 @@ class _CharacterPickerState extends ConsumerState<CharacterPicker> {
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
                           CharacterPickerImage(
                             character: lmCharacter,
                             func: toggleCharacter,
                             selectedCharacter: selectedCharacter,
                           ),
-                      
-                       
                         ],
                       ),
-                  
-                     
+                      const SizedBox(height: 32),
                     ],
                   ),
                 ),
               ),
-              if (!widget.isNotNew ) 
-              
-              selectedCharacter != null
-                  ? Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const LevelView()
-                                  
-                                  // GameView(
-                                  //       mainCharacter: _selectedCharacter!,
-                                  //     )
-                                      
-                                      ),
-                            );
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.pink[300],
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            width: double.infinity,
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 12.0, horizontal: 16.0),
-                              child: Center(
-                                  child: Text(
-                                "Play",
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w900,
-                                    color: Colors.white),
-                              )),
-                            ),
-                          )),
-                    )
-                  : const Spacer()
-            ],
-          ),
+            ),
+            // Play button at the bottom
+            if (!widget.isNotNew && selectedCharacter != null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 30),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LevelView(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.pink[300],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    width: double.infinity,
+                    height: 40,
+                    child: const Center(
+                      child: Text(
+                        "Play",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            if (!widget.isNotNew && selectedCharacter == null)
+              const SizedBox(height: 16),
+          ],
         ),
       ),
     );

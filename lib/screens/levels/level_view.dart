@@ -88,21 +88,21 @@ class _LevelViewState extends ConsumerState<LevelView> {
                   child: Row(
                     children: [
 
-                       GestureDetector(
-                        //icon: Icon(Icons.home),
-                        onTap: () {
-                          Navigator.of(context).pop();
-                          //player.stop(); // Stop audio when leaving
+                      //  GestureDetector(
+                      //   //icon: Icon(Icons.home),
+                      //   onTap: () {
+                      //     Navigator.of(context).pop();
+                      //     //player.stop(); // Stop audio when leaving
 
                           
-                        },
-                        child: BackArrowButton(),
-                        //color: Colors.white,
-                      ),
+                      //   },
+                      //   child: BackArrowButton(),
+                      //   //color: Colors.white,
+                      // ),
                       Spacer(),
-                      Text('Level: $level'),
-                Text(' Gameplay: $gameplay'),
-                      Spacer(),
+                //       Text('Level: $level'),
+                // Text(' Gameplay: $gameplay'),
+                //    Spacer(),
                       GestureDetector(
                         //icon: Icon(Icons.home),
                         onTap: () {
@@ -120,14 +120,21 @@ class _LevelViewState extends ConsumerState<LevelView> {
                       GestureDetector(
                         //icon: Icon(Icons.home),
                         onTap: () {
-                         Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Settings()
-                    ),
-                  );
+                        showModalBottomSheet(
                           
-                        },
+      context: context,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
+      ),
+      builder: (BuildContext context) {
+        
+        return Container(
+      height: MediaQuery.of(context).size.height * 0.3, // 60% of the screen height
+      child: SettingsModalContent(),
+    ); // This will contain the settings
+      },
+    );
+  },
                         child: SettingsButton(),
                         //color: Colors.white,
                       ),
@@ -238,8 +245,8 @@ class _LevelViewState extends ConsumerState<LevelView> {
               child: Center(
                 child: Text(
 
-                  (index + 1 > level) ? "🔒 Locked" : (index + 1 == level) ?
-                  "Play" : "Completed",
+                  (index + 1 > level) ? "🔒 Locked" : (index + 1 != level) ?
+                    "Completed" : (gameplay != 0) ? "Resume" : "Play",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w900,
@@ -274,5 +281,13 @@ Spacer(),
         ),
       ),
     );
+  }
+}
+
+
+class SettingsModalContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const Settings();
   }
 }

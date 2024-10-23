@@ -72,44 +72,46 @@ class _SettingsState extends ConsumerState<Settings> {
   int? _gameplayInput;
 
   void _showResetConfirmationDialog(BuildContext context, String type) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      final level = ref.watch(levelProvider);
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        final level = ref.watch(levelProvider);
 
-      return AlertDialog(
-        title: const Text('Reset Game'),
-        content: Text(
+        return AlertDialog(
+          title: const Text('Reset Game'),
+          content: Text(type == "Game"
+              ? "Are you sure you want to reset the entire game? This will reset your gameplay progress."
+              : 'Are you sure you want to reset this level? This will reset your gameplay progress for level $level.'),
+          actions: [
+            TextButton(
+              child: const Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+            ),
+            TextButton(
+              child: const Text('Yes'),
+              onPressed: () {
+                // Perform the reset action
+                type == "Game" ? _resetGame() : _resetLevel();
+                Navigator.of(context).pop(); // Close the dialog
 
-          type == "Game" ? "Are you sure you want to reset the entire game? This will reset your gameplay progress." :
-            'Are you sure you want to reset this level? This will reset your gameplay progress for level $level.'),
-        actions: [
-          TextButton(
-            child: const Text('Cancel'),
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the dialog
-            },
-          ),
-          TextButton(
-            child: const Text('Yes'),
-            onPressed: () {
-              // Perform the reset action
-              type == "Game" ?  _resetGame() : _resetLevel();
-              Navigator.of(context).pop(); // Close the dialog
+                // Optionally, show a confirmation message
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                      content: Text(type == "Game"
+                          ? 'Game has been reset.'
+                          : 'Level $level has been reset.')),
+                );
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
-              // Optionally, show a confirmation message
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text( type == "Game" ? 'Game has been reset.' : 'Level $level has been reset.')),
-              );
-            },
-          ),
-        ],
-      );
-    },
-  );
-}
-
-void _resetGame() {
+  void _resetGame() {
     // Reset level and gameplay using Riverpod notifiers
     ref.read(levelProvider.notifier).setLevel(1);
     ref.read(gameplayProvider.notifier).setGameplay(0);
@@ -133,7 +135,6 @@ void _resetGame() {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     // Watch the current level and gameplay values
@@ -141,131 +142,51 @@ void _resetGame() {
     final gameplay = ref.watch(gameplayProvider);
 
     // Obtain the notifiers to modify the values
-    final levelNotifier = ref.read(levelProvider.notifier);
-    final gameplayNotifier = ref.read(gameplayProvider.notifier);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings'),
-      ),
-      body: Padding(
+    return SizedBox(
+      width: double.infinity,
+      child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           // Adjust as needed
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Display and modify Level
-            Text(
-              'Level: $level',
-              style: const TextStyle(fontSize: 24),
+            const Center(
+                child: Text(
+              "Settings",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            )),
+            const SizedBox(height: 24),
+            SizedBox(
+              width:
+                  double.infinity, // Makes the button stretch across the screen
+              child: ElevatedButton(
+                onPressed: () {
+                  _showResetConfirmationDialog(context, "Game");
+                },
+                style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.blue, // Set the background color to blue
+      elevation: 0, // Remove the elevation
+    ),
+                child: const Text('Reset Game', style: TextStyle(color: Colors.white),),
+              ),
             ),
-            const SizedBox(height: 8),
-
-            ElevatedButton(
-  onPressed: () {
-    _showResetConfirmationDialog(context, "Game");
-  },
-  child: const Text('Reset Game'),
-),
-
-SizedBox(height: 12,),
-
-ElevatedButton(
-  onPressed: () {
-    _showResetConfirmationDialog(context, "Level");
-  },
-  child: const Text('Reset Level'),
-),
-
-
-
-
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    levelNotifier.decrement();
-                  },
-                  child: const Text('-'),
-                ),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () {
-                    levelNotifier.increment();
-                  },
-                  child: const Text('+'),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: TextField(
-                    decoration: const InputDecoration(
-                      labelText: 'Set Level',
-                      border: OutlineInputBorder(),
-                    ),
-                    keyboardType: TextInputType.number,
-                    onChanged: (value) {
-                      _levelInput = int.tryParse(value);
-                    },
-                  ),
-                ),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () {
-                    if (_levelInput != null) {
-                      levelNotifier.setLevel(_levelInput!);
-                      FocusScope.of(context).unfocus(); // Dismiss keyboard
-                    }
-                  },
-                  child: const Text('Set'),
-                ),
-              ],
+            const SizedBox(
+              height: 8,
             ),
-            const Divider(height: 32),
-            // Display and modify Gameplay
-            Text(
-              'Gameplay: $gameplay',
-              style: const TextStyle(fontSize: 24),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    gameplayNotifier.decrement();
-                  },
-                  child: const Text('-'),
-                ),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () {
-                    gameplayNotifier.increment();
-                  },
-                  child: const Text('+'),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: TextField(
-                    decoration: const InputDecoration(
-                      labelText: 'Set Gameplay',
-                      border: OutlineInputBorder(),
-                    ),
-                    keyboardType: TextInputType.number,
-                    onChanged: (value) {
-                      _gameplayInput = int.tryParse(value);
-                    },
-                  ),
-                ),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () {
-                    if (_gameplayInput != null) {
-                      gameplayNotifier.setGameplay(_gameplayInput!);
-                      FocusScope.of(context).unfocus(); // Dismiss keyboard
-                    }
-                  },
-                  child: const Text('Set'),
-                ),
-              ],
+            SizedBox(
+              width:
+                  double.infinity, // Makes the button stretch across the screen
+              child: ElevatedButton(
+                onPressed: () {
+                  _showResetConfirmationDialog(context, "Level");
+                },
+                style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.blue, // Set the background color to blue
+      elevation: 0, // Remove the elevation
+    ),
+                child: const Text('Reset Level', style: TextStyle(color: Colors.white),),
+              ),
             ),
           ],
         ),

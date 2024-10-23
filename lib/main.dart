@@ -8,6 +8,7 @@ import 'package:roadmap_game/providers/main_provider.dart';
 import 'package:roadmap_game/providers/providers.dart';
 import 'package:roadmap_game/screens/character_picker/character_picker.dart';
 import 'package:roadmap_game/screens/levels/level_view.dart';
+import 'package:roadmap_game/screens/loading_screen/loading_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -20,7 +21,9 @@ void main() async {
       overrides: [
         sharedPreferenceProvider.overrideWithValue(sharedPreferences),
       ],
-      child: const MyApp(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: LoadingScreen()),
     ),
   );
 }
